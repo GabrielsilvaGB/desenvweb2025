@@ -25,15 +25,14 @@ input {
         border: 2px solid #333;
         background-color: #f2f2f2;
         padding: 30px;
-        margin: 30px auto; /* Centraliza a box */
-        border-radius: 10px; /* Cantos arredondados */
+        margin: 30px auto; 
+        border-radius: 10px; 
         box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
 
-        /*Isso serve para centralizar os inputs no centro da box*/
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center; /* Sombra */
+        align-items: center; 
     }
 .grupo-input p {
     margin: auto; 
