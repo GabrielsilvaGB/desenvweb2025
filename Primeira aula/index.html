@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu HTML</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-
 </head>
 <body>
     <h1>Descubra aqui</h1>
@@ -16,34 +14,43 @@
             <li>
                 <div class="grupo-input"> 
                     <p>Nome:</p>
-                    <input type="text">
+                    <input type="text" size="30" placeholder="Informe seu nome" maxlength="100">
                 </div>
+            </li>
+            <li>
+                <div class="grupo-input">
+                    <p>Data de Nascimento:</p>
+                    <input type="date" size="30" placeholder="Informe sua data de nascimento" maxlength="100">  
+                </div> 
+            </li>
             </li>
             <li>
                 <div class="grupo-input"> 
                     <p>N° do cartão:</p>
-                    <input type="text">
+                    <input type="password" size="30" placeholder="Informe o n° do cartão" maxlength="100">
                 </div>
             </li>
             <li>
                 <div class="grupo-input">
                     <p>CVV:</p>
-                    <input type="text">
+                    <input type="text" size="30" placeholder="Informe o CVV" maxlength="10">
                 </div>
             </li>
             <li>
                 <div class="grupo-input">
                     <p>CPF:</p>
-                    <input type="text">
+                    <input type="text" size="30" placeholder="Informe seu CPF" maxlength="14">
                 </div>
             </li>
             <li>
                 <div class="grupo-input">
                     <p>Senha do cartão:</p>
-                    <input type="password">
+                    <input type="password" size="30" placeholder="Informe a senha" maxlength="100">
                 </div>
             </li>
-                <input type="button" value="Enviar">
+            <li>
+                <input type="submit" value="Enviar">
+            </li>
         </ul>
     </div>
 </body>
