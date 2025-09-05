@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+    <style>
+        .erro {
+            border: 2px solid red !important;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Cadastro</legend>
+        <ul>
+            <li>
+                <div class="container">
+                    <label>Usuário:</label>
+                    <input type="text" id="usuario" placeholder="Informe seu usuário" maxlength="100">
+                </div>        
+            </li>
+            <li>
+                <div class="container">
+                    <label>Senha:</label>
+                    <input type="password" id="senha" placeholder="Informe sua senha" maxlength="100">
+                </div>
+            </li>
+            <li>
+                <div class="botoes">
+                    <button type="button" onclick="verificaLogin()">Login</button>
+                </div>
+            </li>
+        </ul>
+    </fieldset>
+    <script>
+        function verificaLogin() {
+            const usuarioInput = document.getElementById('usuario');
+            const senhaInput = document.getElementById('senha');
+            const usuario = usuarioInput.value;
+            const senha = senhaInput.value;
+
+            // Remove a classe erro antes de verificar
+            usuarioInput.classList.remove('erro');
+            senhaInput.classList.remove('erro');
+
+            if (usuario === "user" && senha === "pass") {
+                alert("Login Ok");
+            } else {
+                usuarioInput.classList.add('erro');
+                senhaInput.classList.add('erro');
+            }
+        }
+    </script>
+</body>
