@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulação de Juros - Compra de moto</title>
+</head>
+
+<body>
+    <h1>Compre sua moto nova aqui:</h1>
+    <h2>A moto esta no valor de R$8.654,00 vista, porém você pode parcelar em até 60 vezes, simule já seu empréstimo.
+    </h2>
+    <form action="atividadenove.php" method="post">
+        <label for="parcelas">Escolha o número de parcelas:</label>
+        <select name="parcelas" id="parcelas">
+            <option value="24">24 vezes</option>
+            <option value="36">36 vezes</option>
+            <option value="48">48 vezes</option>
+            <option value="60">60 vezes</option>
+        </select>
+        <br>
+        <button type="submit">Calcular o valor da parcela</button>
+    </form>
+</body>
+
+</html>
