@@ -1,0 +1,83 @@
+[
+    {
+        "nome": "GABRIEL",
+        "sobrenome": "DA SILVA",
+        "email": "lista@bc.com.br",
+        "senha": "$2y$10$v27mLXUrl9b\/\/lblneMWZuNgMyWlJP4r\/HjiWuGxsa\/hVVtJuVDpe",
+        "cidade": "Rio do Oeste",
+        "estado": "SC",
+        "created_at": "2025-10-25T20:10:38+02:00"
+    },
+    {
+        "nome": "jonas",
+        "sobrenome": "ltz",
+        "email": "gx@ltz.com.br",
+        "senha": "$2y$10$PD.NVq3kya8Hwh4vcX5SDO9VyoABm91vq.Z7p499Je9fHzWYT\/yTi",
+        "cidade": "Rio do Oeste",
+        "estado": "SC",
+        "created_at": "2025-10-25T20:13:15+02:00"
+    },
+    {
+        "nome": "Jean",
+        "sobrenome": "carlos",
+        "email": "jean@ltz.com.br",
+        "senha": "$2y$10$PnDc95MPlKVYkpaDt10vnuG4IRK1.vrKMEZBTN21od2E5QMAl37AW",
+        "cidade": "Rio do Oeste",
+        "estado": "SC",
+        "created_at": "2025-10-25T20:16:34+02:00"
+    },
+    {
+        "nome": "pedro",
+        "sobrenome": "paulo",
+        "email": "pedro@pe.com.br",
+        "senha": "$2y$10$FcQlXbOqHX9JpsYQnq83QOmHEHKCsqsktXZ87tYrUj6B89ox8Mjhi",
+        "cidade": "Rio do Oeste",
+        "estado": "SC",
+        "created_at": "2025-10-25T20:17:05+02:00"
+    },
+    {
+        "nome": "Luisa",
+        "sobrenome": "Bruna",
+        "email": "Luisa@ls.com.br",
+        "senha": "$2y$10$0335wmdYHyMPBpgd7v\/X6.x6vRn6c09B6gZPKJRShZ\/2NWFXfH7by",
+        "cidade": "Rio do Oeste",
+        "estado": "SC",
+        "created_at": "2025-10-25T20:17:35+02:00"
+    },
+    {
+        "nome": "Lavignia",
+        "sobrenome": "silva",
+        "email": "Lavignia@la.com.br",
+        "senha": "$2y$10$ckSweYIMvZlP9OG1WHyt4u1yubsYEDyq0D81W9VwvZSUwI6LcXcYC",
+        "cidade": "Rio do Oeste",
+        "estado": "SC",
+        "created_at": "2025-10-25T20:18:00+02:00"
+    },
+    {
+        "nome": "Analú",
+        "sobrenome": "silva",
+        "email": "analu@ana.com.br",
+        "senha": "$2y$10$L7sDsZN4Y63\/1gvKuvTouOywb.ohuH40gK8nfgHjwK5uj1OgstzQC",
+        "cidade": "Rio do Oeste",
+        "estado": "SC",
+        "created_at": "2025-10-25T20:18:22+02:00"
+    },
+    {
+        "nome": "Claudio",
+        "sobrenome": "carlos",
+        "email": "claudio@cla.com.br",
+        "senha": "$2y$10$WDSMRcXN0WDuMRJpOTjPeOXIBzbPnnl\/\/xkC5NmOvEFvjgjrtFa0K",
+        "cidade": "Rio do Oeste",
+        "estado": "SC",
+        "created_at": "2025-10-25T20:19:05+02:00"
+    },
+    {
+        "nome": "Luana",
+        "sobrenome": "Machado",
+        "email": "Luana@lu.com.br",
+        "senha": "$2y$10$PG..OaxX6TDi3K3\/txlOP.zMlE39RaovL3TD.q88X1gJXy.349V1.",
+        "cidade": "Rio do Oeste",
+        "estado": "SC",
+        "created_at": "2025-10-25T20:19:37+02:00"
+    }
+]

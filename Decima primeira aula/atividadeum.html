@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insere no banco</title>
+</head>
+
+<body>
+    <form method="POST">
+        <h1>Preencha o formulário abaixo:</h1>
+        <label>Nome:</label>
+        <input type="text" name="nome" required><br>
+
+        <label>Sobrenome:</label>
+        <input type="text" name="sobrenome" required><br>
+
+        <label>Email:</label>
+        <input type="text" name="email" required><br>
+
+        <label>Senha:</label>
+        <input type="password" name="senha" required><br>
+
+        <label>Cidade:</label>
+        <input type="text" name="cidade" required><br>
+
+        <label>Estado:</label>
+        <input type="text" name="estado" required><br><br>
+
+        <button type="submit" formaction="atividadeum.php">Inserir</button>
+        <button type="submit" formaction="listardados.php">Listar</button>
+    </form>
+    <br>
+    <form method="POST">
+        <Label>Você deseja buscar alguém no cadastro?</Label>
+        <input type="text" name="cadastro" required>
+        <br>
+        <button type="submit" formaction="consulta.php">Consulta no cadastro</button>
+    </form>
+</body>
+</html>
