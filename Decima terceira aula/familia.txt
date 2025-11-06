@@ -1,0 +1,5 @@
+eu | Lucas Silva | 25 | lucas.silva@example.com | Blumenau | Santa Catarina | 2025-11-06T01:03:28+01:00
+pai | Carlos Silva | 55 | carlos.silva@example.com | Blumenau | Santa Catarina | 2025-11-06T01:03:28+01:00
+mae | Marcia Silva | 53 | marcia.silva@example.com | Blumenau | Santa Catarina | 2025-11-06T01:03:28+01:00
+irmao | Rafael Silva | 28 | rafael.silva@example.com | Joinville | Santa Catarina | 2025-11-06T01:03:28+01:00
+irma | Ana Silva | 22 | ana.silva@example.com | Florianopolis | Santa Catarina | 2025-11-06T01:03:28+01:00

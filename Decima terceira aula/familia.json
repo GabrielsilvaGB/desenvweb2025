@@ -1,0 +1,52 @@
+[
+    {
+        "nome": "Lucas",
+        "sobrenome": "Silva",
+        "idade": 25,
+        "email": "lucas.silva@example.com",
+        "cidade": "Blumenau",
+        "estado": "Santa Catarina",
+        "parentesco": "eu",
+        "created_at": "2025-11-06T01:03:28+01:00"
+    },
+    {
+        "nome": "Carlos",
+        "sobrenome": "Silva",
+        "idade": 55,
+        "email": "carlos.silva@example.com",
+        "cidade": "Blumenau",
+        "estado": "Santa Catarina",
+        "parentesco": "pai",
+        "created_at": "2025-11-06T01:03:28+01:00"
+    },
+    {
+        "nome": "Marcia",
+        "sobrenome": "Silva",
+        "idade": 53,
+        "email": "marcia.silva@example.com",
+        "cidade": "Blumenau",
+        "estado": "Santa Catarina",
+        "parentesco": "mae",
+        "created_at": "2025-11-06T01:03:28+01:00"
+    },
+    {
+        "nome": "Rafael",
+        "sobrenome": "Silva",
+        "idade": 28,
+        "email": "rafael.silva@example.com",
+        "cidade": "Joinville",
+        "estado": "Santa Catarina",
+        "parentesco": "irmao",
+        "created_at": "2025-11-06T01:03:28+01:00"
+    },
+    {
+        "nome": "Ana",
+        "sobrenome": "Silva",
+        "idade": 22,
+        "email": "ana.silva@example.com",
+        "cidade": "Florianopolis",
+        "estado": "Santa Catarina",
+        "parentesco": "irma",
+        "created_at": "2025-11-06T01:03:28+01:00"
+    }
+]
