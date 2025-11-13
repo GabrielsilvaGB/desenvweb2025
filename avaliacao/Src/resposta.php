@@ -8,7 +8,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     function limpaDados() {
         $comentario = filter_input(INPUT_POST, 'areaFeedback', FILTER_SANITIZE_SPECIAL_CHARS);
         $respostas = $_POST['respostas'] ?? [];
-        // Se você quiser usar id_dispositivo, mantenha esta linha
         $dispositivoInfo = filter_input(INPUT_POST, 'id_dispositivo', FILTER_VALIDATE_INT);
 
         return [

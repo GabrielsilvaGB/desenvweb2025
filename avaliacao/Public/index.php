@@ -1,5 +1,5 @@
 <?php
-require_once '../Src/conexao.php'; // Caminho ajustado para acessar conexao.php na pasta Src
+require_once '../Src/conexao.php'; 
 $conn = getDbConnection();
 
 $query = "SELECT id_pergunta, texto_pergunta FROM perguntas WHERE status = true ORDER BY id_pergunta";
@@ -13,11 +13,11 @@ $perguntas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.css" /> <!-- CSS está em Public/css -->
+  <link rel="stylesheet" href="css/style.css" /> 
   <script>
     const perguntas = <?= json_encode($perguntas) ?>;
   </script>
-  <script src="js/script.js" defer></script> <!-- JS está em Public/js -->
+  <script src="js/script.js" defer></script> 
   <title>Avaliação</title>
 </head>
 <body>
@@ -26,7 +26,7 @@ $perguntas = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <p id="pergunta" class="pergunta"></p>
   </header>
 
-  <form id="form-avaliacao" method="POST" action="../Src/resposta.php"> <!-- Caminho ajustado para resposta.php -->
+  <form id="form-avaliacao" method="POST" action="../Src/resposta.php">
     <main class="Container" id="avaliacao-boxes">
       <?php for ($i = 0; $i <= 10; $i++): ?>
         <div class="box box-<?= $i ?>" data-nota="<?= $i ?>"><h2 class="numbox"><?= $i ?></h2></div>
