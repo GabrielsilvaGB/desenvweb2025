@@ -45,3 +45,25 @@ function mostrarPergunta() {
     document.getElementById("pergunta").style.display = "block";
     document.getElementById("pergunta").textContent = perguntas[indice].texto_pergunta;
 }
+
+const TEMPO_LIMITE_INATIVIDADE = 180000; //Três minutos
+const URL_REDIRECIONAMENTO = './index.php';
+
+let timerInatividade;
+
+function redirecionarParaOutraPagina() {
+    window.location.href = URL_REDIRECIONAMENTO;
+}
+
+function reiniciarTimerInatividade() {
+    clearTimeout(timerInatividade);
+    timerInatividade = setTimeout(redirecionarParaOutraPagina, TEMPO_LIMITE_INATIVIDADE);
+}
+
+const eventosInteracao = ['click', 'mousemove', 'keydown', 'scroll', 'touchstart'];
+
+eventosInteracao.forEach(evento => {
+    document.addEventListener(evento, reiniciarTimerInatividade, false);
+});
+
+reiniciarTimerInatividade();

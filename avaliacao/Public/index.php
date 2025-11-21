@@ -17,7 +17,7 @@ $perguntas = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <script>
     const perguntas = <?= json_encode($perguntas) ?>;
   </script>
-  <script src="js/script.js" defer></script> 
+  
   <title>Avaliação</title>
 </head>
 <body>
@@ -26,7 +26,7 @@ $perguntas = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <p id="pergunta" class="pergunta"></p>
   </header>
 
-  <form id="form-avaliacao" method="POST" action="../Src/resposta.php">
+  <form id="form-avaliacao" method="POST" action="../Src/resposta.php"> 
     <main class="Container" id="avaliacao-boxes">
       <?php for ($i = 0; $i <= 10; $i++): ?>
         <div class="box box-<?= $i ?>" data-nota="<?= $i ?>"><h2 class="numbox"><?= $i ?></h2></div>
@@ -48,5 +48,6 @@ $perguntas = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <footer>
     <p>Sua avaliação espontânea é anônima, nenhuma informação pessoal é solicitada ou armazenada.</p>
   </footer>
+  <script src="js/script.js" defer></script> 
 </body>
 </html>

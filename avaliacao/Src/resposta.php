@@ -47,9 +47,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Função para redirecionar após o envio
     function redirecionar() {
-        header("Location: obrigado.html");
+        header("Location: /avaliacao/public/obrigado.html");
         exit;
-    }
+    }   
 
     // Executa o fluxo
     $dadoslimpos = limpaDados();
