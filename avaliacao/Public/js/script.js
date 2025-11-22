@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             respostas.push({
                 id_pergunta: perguntaAtual.id_pergunta,
-                nota: parseInt(nota)
+                nota: parseInt(nota),
+                id_setor: perguntaAtual.id_setor
             });
 
             indice++;
@@ -27,11 +28,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Monta os inputs ocultos para envio via POST
                 const container = document.getElementById("respostas-container");
                 respostas.forEach(resposta => {
-                    const input = document.createElement("input");
-                    input.type = "hidden";
-                    input.name = `respostas[${resposta.id_pergunta}]`;
-                    input.value = resposta.nota;
-                    container.appendChild(input);
+                    // Input para a resposta (nota)
+                    const inputResposta = document.createElement("input");
+                    inputResposta.type = "hidden";
+                    inputResposta.name = `respostas[${resposta.id_pergunta}]`;
+                    inputResposta.value = resposta.nota;
+                    container.appendChild(inputResposta);
+
+
+                    const inputSetor = document.createElement("input");
+                    inputSetor.type = "hidden";
+                    inputSetor.name = `setores[${resposta.id_pergunta}]`;
+                    inputSetor.value = resposta.id_setor || idSetorAtual || '';
+                    container.appendChild(inputSetor);
                 });
             }
         });

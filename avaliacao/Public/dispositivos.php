@@ -3,7 +3,7 @@
 //Proteção de sessão
 session_start();
 if (!isset($_SESSION['user_id'])) {
-    header("Location: /avaliacao/public/login.php");
+    header("Location: /avaliacao/src/login.php");
     exit;
 }
 
@@ -11,7 +11,7 @@ if (!isset($_SESSION['user_id'])) {
 require_once __DIR__ . '/../src/conexao.php';
 $pdo = getDbConnection();
 
-//Helpers / Sanitização simples
+//Sanitização simples
 function esc($v) {
     return htmlspecialchars($v ?? '', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 }
@@ -101,7 +101,6 @@ $setores = $pdo->query("SELECT * FROM setores ORDER BY nome")->fetchAll(PDO::FET
 <body>
 
     <div class="admin-container">
-
             <div class="admin-header">
                 <h1>Cadastro de Dispositivos</h1>
                 <a href="/avaliacao/public/admin.php" class="btn-secondary">Voltar</a>
@@ -133,7 +132,8 @@ $setores = $pdo->query("SELECT * FROM setores ORDER BY nome")->fetchAll(PDO::FET
                     </select>
 
                     <div style="margin-top:8px;">
-                        <label><input type="checkbox" name="status" <?= (isset($editar['status']) && $editar['status']) ? 'checked' : '' ?>> Ativo</label>
+                        <input type="hidden" name="status" value="off">
+                        <label><input type="checkbox" name="status" value="on" <?= (isset($editar['status']) && $editar['status']) ? 'checked' : '' ?>> Ativo</label>
                     </div>
 
                     <div class="form-actions">

@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['user_id'])) {
-    header("Location: /avaliacao/public/login.php");
+    header("Location: /avaliacao/src/login.php");
     exit;
 }
 
@@ -30,6 +30,15 @@ $mediasPerguntas = $conn->query("
     ORDER BY p.id_pergunta
 ")->fetchAll(PDO::FETCH_ASSOC);
 
+//media por setor
+$mediasSetores = $conn->query("
+    SELECT s.nome, AVG(a.resposta) AS media
+    FROM avaliacoes a
+    INNER JOIN setores s ON s.id_setor = a.id_setor
+    WHERE a.id_setor IS NOT NULL
+    GROUP BY s.id_setor, s.nome
+    ORDER BY s.nome
+")->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -70,7 +79,17 @@ $mediasPerguntas = $conn->query("
                 <?php endforeach; ?>
             </ul>
         </div>
-
-    </div>  
+        
+        <div class="card">
+            <strong>Média por Setor</strong>
+            <ul>
+                <?php foreach ($mediasSetores as $m): ?>
+                    <li>
+                        <?= htmlspecialchars($m['nome']) ?>: <strong><?= number_format($m['media'], 2, ',', '.') ?></strong>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    </div> 
 </body>
 </html>

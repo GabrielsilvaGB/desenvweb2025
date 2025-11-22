@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: /avaliacao/public/login.php");
+    header("Location: /avaliacao/src/login.php");
     exit;
 }
 ?>
@@ -52,7 +52,7 @@ if (!isset($_SESSION['user_id'])) {
         </div>
 
         <div class="admin-actions">
-            <a href="/avaliacao/public/logout.php" class="btn-secondary">Logout</a>
+            <a href="/avaliacao/src/logout.php" class="btn-secondary">Logout</a>
         </div>
     </div>
 

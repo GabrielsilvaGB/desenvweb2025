@@ -1,18 +1,24 @@
 <?php
 session_start();
 if (!isset($_SESSION['user_id'])) {
-    header("Location: /avaliacao/public/login.php");
+    header("Location: /avaliacao/src/login.php");
     exit;
 }
 
 require_once __DIR__ . '/../src/conexao.php';
 $conn = getDbConnection();
 
-// Buscar todas as avaliações
 $avaliacoes = $conn->query("
-    SELECT a.id_avaliacao, a.resposta, a.feedback_textual, a.data_hora, p.texto_pergunta
+    SELECT 
+        a.id_avaliacao, 
+        a.resposta, 
+        a.feedback_textual, 
+        a.data_hora, 
+        p.texto_pergunta,
+        s.nome as setor_nome
     FROM avaliacoes a
     INNER JOIN perguntas p ON p.id_pergunta = a.id_pergunta
+    LEFT JOIN setores s ON s.id_setor = a.id_setor
     ORDER BY a.data_hora DESC
 ")->fetchAll(PDO::FETCH_ASSOC);
 
@@ -47,6 +53,7 @@ function esc($v) {
                         <tr>
                             <th>ID</th>
                             <th>Pergunta</th>
+                            <th>Setor</th>
                             <th>Nota</th>
                             <th>Feedback</th>
                             <th>Data / Hora</th>
@@ -54,12 +61,13 @@ function esc($v) {
                     </thead>
                     <tbody>
                         <?php if (empty($avaliacoes)): ?>
-                            <tr><td colspan="5" class="center small">Nenhuma avaliação registrada.</td></tr>
+                            <tr><td colspan="6" class="center small">Nenhuma avaliação registrada.</td></tr>
                         <?php else: ?>
                             <?php foreach ($avaliacoes as $a): ?>
                                 <tr>
                                     <td><?= (int)$a['id_avaliacao'] ?></td>
                                     <td><?= esc($a['texto_pergunta']) ?></td>
+                                    <td><?= esc($a['setor_nome'] ?? '—') ?></td>
                                     <td><?= esc($a['resposta']) ?></td>
                                     <td><?= esc($a['feedback_textual']) ?></td>
                                     <td><?= date('d/m/Y H:i', strtotime($a['data_hora'])) ?></td>
