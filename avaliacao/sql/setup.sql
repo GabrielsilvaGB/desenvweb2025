@@ -36,4 +36,4 @@ CREATE TABLE avaliacoes (
     FOREIGN KEY (id_setor) REFERENCES setores(id_setor)
 );
 
-INSERT INTO usuarios (usuario, senha) VALUES ('admin', 'admin123');
+INSERT INTO usuarios (usuario, senha) VALUES ('gabriel.silva', '1234');
